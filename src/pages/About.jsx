@@ -10,7 +10,10 @@ export default function About() {
       />
       <section className="section-pad" style={{ padding: '130px 40px 80px', maxWidth: 1200, margin: '0 auto' }}>
         <div className="about-grid" style={{ display: 'grid', gridTemplateColumns: '0.8fr 1.2fr', gap: 80, alignItems: 'center' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
           <div className="about-photo" style={{ width: '100%', aspectRatio: '3/4', backgroundImage: 'url(/trevan-ransom.webp)', backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: 20 }} />
+          <div style={{ width: '100%', aspectRatio: '3/4', backgroundImage: 'url(/family.jpg)', backgroundSize: 'cover', backgroundPosition: 'center top', borderRadius: 20 }} />
+        </div>
           <div>
             <div className="section-tag">About</div>
             <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(36px, 4vw, 48px)', color: 'var(--charcoal)', marginBottom: 20, letterSpacing: '-0.02em' }}>Grew up here. Work here.</h1>
