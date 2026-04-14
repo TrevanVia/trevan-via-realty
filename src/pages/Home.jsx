@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import SEO from '../components/SEO'
 
 export default function Home() {
   const [formData, setFormData] = useState({ address: '', beds: '3', baths: '2', email: '' })
@@ -15,6 +16,11 @@ export default function Home() {
 
   return (
     <>
+      <SEO
+        title="SW Virginia Real Estate"
+        description="Trevan Via Realty. Homes, land, and commercial properties for sale in Blacksburg, Christiansburg, Floyd, Radford, and Pulaski County. New River Valley real estate."
+        path="/"
+      />
       <section className="hero-section section-pad" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', padding: '120px 40px 80px', position: 'relative', overflow: 'hidden' }}>
         <div className="hero-grid" style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 80, alignItems: 'center', width: '100%' }}>
           <div>

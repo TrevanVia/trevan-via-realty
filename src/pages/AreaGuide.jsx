@@ -1,13 +1,25 @@
 import { useParams, Link } from 'react-router-dom'
 import { areas } from '../data/areas'
+import SEO from '../components/SEO'
+
+const seoData = {
+  blacksburg: { title: 'Blacksburg VA Real Estate | Homes for Sale', desc: 'Homes for sale in Blacksburg VA. Market stats, school ratings, things to do, and neighborhood guides. Trevan Via Realty.' },
+  christiansburg: { title: 'Christiansburg VA Real Estate | Homes for Sale', desc: 'Homes for sale in Christiansburg VA. New construction, affordable housing, and I-81 access. Trevan Via Realty.' },
+  'floyd-county': { title: 'Floyd County VA Land & Homes for Sale', desc: 'Land, acreage, and homes for sale in Floyd County VA. Blue Ridge Parkway access, farmland, and rural living. Trevan Via Realty.' },
+  radford: { title: 'Radford VA Real Estate | Homes for Sale', desc: 'Homes and investment properties for sale in Radford VA. New River access, Radford University area. Trevan Via Realty.' },
+  'pulaski-county': { title: 'Pulaski County VA Real Estate | Claytor Lake Homes', desc: 'Homes and lakefront property for sale in Pulaski County VA. Claytor Lake, New River Trail, affordable housing. Trevan Via Realty.' },
+}
 
 export default function AreaGuide() {
   const { slug } = useParams()
   const area = areas[slug]
   if (!area) return <div style={{ padding: '160px 40px', textAlign: 'center' }}><h1>Area not found</h1></div>
 
+  const seo = seoData[slug] || { title: `${area.name} VA Real Estate`, desc: area.heroSub }
+
   return (
     <>
+      <SEO title={seo.title} description={seo.desc} path={`/areas/${slug}`} />
       <section className="section-pad" style={{ padding: '130px 40px 60px', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, var(--olive-dark), var(--olive), var(--olive-light))', opacity: 0.95 }} />
         <div style={{ position: 'relative', zIndex: 2, maxWidth: 1200, margin: '0 auto' }}>

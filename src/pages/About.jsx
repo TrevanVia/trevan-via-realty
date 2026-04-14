@@ -1,6 +1,13 @@
+import SEO from '../components/SEO'
+
 export default function About() {
   return (
     <>
+      <SEO
+        title="About Trevan Via"
+        description="Floyd County native, licensed Realtor with Gravity Real Estate Group. Buying, selling, and land deals across the New River Valley. (540) 239-4636."
+        path="/about"
+      />
       <section className="section-pad" style={{ padding: '130px 40px 80px', maxWidth: 1200, margin: '0 auto' }}>
         <div className="about-grid" style={{ display: 'grid', gridTemplateColumns: '0.8fr 1.2fr', gap: 80, alignItems: 'center' }}>
           <div className="about-photo" style={{ width: '100%', aspectRatio: '3/4', backgroundImage: 'url(/trevan-ransom.webp)', backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: 20 }} />

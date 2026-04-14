@@ -1,8 +1,15 @@
 import { Link } from 'react-router-dom'
 import { areas } from '../data/areas'
+import SEO from '../components/SEO'
 
 export default function AreasIndex() {
   return (
+    <>
+    <SEO
+      title="New River Valley Area Guides"
+      description="Explore Blacksburg, Christiansburg, Floyd County, Radford, and Pulaski County. Market stats, schools, things to do, and homes for sale in each area."
+      path="/areas"
+    />
     <section className="section-pad" style={{ padding: '130px 40px 80px', maxWidth: 1200, margin: '0 auto' }}>
       <div className="section-tag">Explore the region</div>
       <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(36px, 4vw, 48px)', marginBottom: 12, letterSpacing: '-0.02em' }}>Area guides</h1>
@@ -23,5 +30,6 @@ export default function AreasIndex() {
         ))}
       </div>
     </section>
+    </>
   )
 }
