@@ -3,11 +3,11 @@ import { areas } from '../data/areas'
 
 export default function AreasIndex() {
   return (
-    <section style={{ padding: '130px 40px 80px', maxWidth: 1200, margin: '0 auto' }}>
+    <section className="section-pad" style={{ padding: '130px 40px 80px', maxWidth: 1200, margin: '0 auto' }}>
       <div className="section-tag">Explore the region</div>
       <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(36px, 4vw, 48px)', marginBottom: 12, letterSpacing: '-0.02em' }}>Area guides</h1>
       <p className="section-sub">Get to know the communities of the New River Valley before you buy.</p>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+      <div className="area-preview-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
         {Object.values(areas).map(area => (
           <Link to={`/areas/${area.slug}`} key={area.slug} style={{ borderRadius: 16, overflow: 'hidden', background: 'white', boxShadow: '0 2px 20px rgba(0,0,0,0.04)', transition: 'all 0.3s' }}>
             <div style={{ height: 180, background: 'linear-gradient(135deg, var(--olive-light), var(--olive-dark))' }} />

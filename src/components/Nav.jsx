@@ -33,12 +33,17 @@ export default function Nav() {
           <a href="tel:5402394636" style={{
             background: 'var(--olive)', color: 'var(--warm-cream)',
             padding: '10px 22px', borderRadius: '8px', fontSize: '15px', fontWeight: 500,
-            transition: 'background 0.2s',
           }}>
             Get in touch
           </a>
         </li>
       </ul>
+      <a href="tel:5402394636" className="mobile-cta" style={{
+        display: 'none', background: 'var(--olive)', color: 'var(--warm-cream)',
+        padding: '10px 18px', borderRadius: '8px', fontSize: '14px', fontWeight: 500,
+      }}>
+        Call me
+      </a>
     </nav>
   )
 }

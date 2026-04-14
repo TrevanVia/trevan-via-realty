@@ -15,8 +15,8 @@ export default function Home() {
 
   return (
     <>
-      <section style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', padding: '120px 40px 80px', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 80, alignItems: 'center', width: '100%' }}>
+      <section className="hero-section section-pad" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', padding: '120px 40px 80px', position: 'relative', overflow: 'hidden' }}>
+        <div className="hero-grid" style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 80, alignItems: 'center', width: '100%' }}>
           <div>
             <span style={{ display: 'inline-block', fontSize: 13, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--terracotta)', marginBottom: 20 }}>Southwest Virginia Real Estate</span>
             <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(42px, 5vw, 62px)', lineHeight: 1.1, color: 'var(--charcoal)', marginBottom: 24, letterSpacing: '-0.02em' }}>
@@ -67,9 +67,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats bar */}
       <div style={{ background: 'var(--olive-dark)', padding: '40px' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 40, textAlign: 'center' }}>
+        <div className="stats-bar-grid" style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 40, textAlign: 'center' }}>
           {[['150+', 'Homes sold'], ['$42M', 'Total volume'], ['12', 'Years in SW Virginia'], ['4.9', 'Average rating']].map(([num, label]) => (
             <div key={label}>
               <div style={{ fontFamily: 'var(--font-numbers)', fontSize: 36, color: 'var(--warm-cream)', marginBottom: 4, fontWeight: 500 }}>{num}</div>
@@ -79,19 +78,18 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Areas preview */}
-      <section style={{ padding: '100px 40px', maxWidth: 1200, margin: '0 auto' }} id="areas">
+      <section className="section-pad" style={{ padding: '100px 40px', maxWidth: 1200, margin: '0 auto' }} id="areas">
         <div className="section-tag">Explore the region</div>
         <h2 className="section-title">Know your neighborhood</h2>
         <p className="section-sub">I cover five areas across the NRV. Here's a look at each one.</p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+        <div className="area-preview-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
           {[
             { name: 'Blacksburg', slug: 'blacksburg', desc: 'Home to Virginia Tech, a thriving downtown, and one of the best food scenes in the region.', stat: 'Median: $366K' },
             { name: 'Floyd County', slug: 'floyd-county', desc: 'Rolling farmland, artist communities, and the famous Friday Night Jamboree.', stat: 'Acreage available' },
             { name: 'Christiansburg', slug: 'christiansburg', desc: 'The commercial hub of Montgomery County with easy interstate access and new developments.', stat: 'Median: $271K' },
           ].map(area => (
             <Link to={`/areas/${area.slug}`} key={area.slug} style={{ borderRadius: 16, overflow: 'hidden', background: 'white', boxShadow: '0 2px 20px rgba(0,0,0,0.04)', transition: 'all 0.3s', textDecoration: 'none', color: 'inherit' }}>
-              <div style={{ height: 200, background: `linear-gradient(135deg, var(--olive-light) 0%, var(--olive-dark) 100%)` }} />
+              <div style={{ height: 200, background: 'linear-gradient(135deg, var(--olive-light) 0%, var(--olive-dark) 100%)' }} />
               <div style={{ padding: 24 }}>
                 <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 22, marginBottom: 8 }}>{area.name}</h3>
                 <p style={{ fontSize: 14, color: 'var(--warm-gray)', lineHeight: 1.6, fontWeight: 300 }}>{area.desc}</p>
@@ -102,10 +100,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About section */}
-      <section style={{ padding: '100px 40px', background: 'var(--warm-cream-dark)' }} id="about">
-        <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '0.8fr 1.2fr', gap: 80, alignItems: 'center' }}>
-          <div style={{ width: '100%', aspectRatio: '3/4', backgroundImage: 'url(/trevan-ransom.webp)', backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: 20 }} />
+      <section className="section-pad" style={{ padding: '100px 40px', background: 'var(--warm-cream-dark)' }} id="about">
+        <div className="about-grid" style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '0.8fr 1.2fr', gap: 80, alignItems: 'center' }}>
+          <div className="about-photo" style={{ width: '100%', aspectRatio: '3/4', backgroundImage: 'url(/trevan-ransom.webp)', backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: 20 }} />
           <div>
             <div className="section-tag">About</div>
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(32px, 4vw, 44px)', color: 'var(--charcoal)', marginBottom: 20, letterSpacing: '-0.02em' }}>Grew up here. Work here.</h2>
@@ -118,7 +115,7 @@ export default function Home() {
             <p style={{ fontSize: 17, color: 'var(--warm-gray)', lineHeight: 1.8, fontWeight: 300, marginBottom: 16 }}>
               My wife and I just had our first daughter, Gemma. We've got a dog named Ransom. We're not going anywhere.
             </p>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginTop: 32 }}>
+            <div className="qualities-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginTop: 32 }}>
               {['Floyd County native', 'NRV specialist', 'No pressure, no BS', 'Available nights & weekends'].map(q => (
                 <div key={q} style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 15, fontWeight: 500 }}>
                   <span style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--terracotta)', flexShrink: 0 }} />
@@ -135,8 +132,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section style={{ padding: '100px 40px', textAlign: 'center' }} id="contact">
+      <section className="section-pad" style={{ padding: '100px 40px', textAlign: 'center' }} id="contact">
         <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(36px, 4vw, 52px)', color: 'var(--charcoal)', marginBottom: 16, letterSpacing: '-0.02em' }}>Ready to make a move?</h2>
         <p style={{ fontSize: 18, color: 'var(--warm-gray)', fontWeight: 300, marginBottom: 36 }}>Buying, selling, or just have questions. Reach out whenever.</p>
         <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>

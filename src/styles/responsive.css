@@ -1,0 +1,25 @@
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .about-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .about-photo { max-width: 320px !important; }
+  .stats-bar-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 24px !important; }
+  .area-preview-grid { grid-template-columns: 1fr !important; }
+  .area-cards-grid { grid-template-columns: 1fr !important; }
+  .why-grid-2col { grid-template-columns: 1fr !important; }
+  .stats-grid-4col { grid-template-columns: repeat(2, 1fr) !important; }
+  .lifestyle-grid-2col { grid-template-columns: 1fr !important; }
+  .commute-grid-2col { grid-template-columns: 1fr !important; }
+  .other-areas-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .services-grid { grid-template-columns: 1fr !important; }
+  .qualities-grid { grid-template-columns: 1fr !important; }
+  .hero-stats-row { flex-wrap: wrap !important; gap: 24px !important; }
+}
+
+@media (max-width: 700px) {
+  .nav-links { display: none !important; }
+  .mobile-cta { display: flex !important; }
+  .section-pad { padding-left: 20px !important; padding-right: 20px !important; }
+  .hero-section { padding: 100px 20px 60px !important; min-height: auto !important; }
+  .other-areas-grid { grid-template-columns: 1fr !important; }
+  .stats-grid-4col { grid-template-columns: 1fr 1fr !important; }
+}
