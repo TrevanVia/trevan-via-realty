@@ -69,7 +69,7 @@ export default function Home() {
 
       <div style={{ background: 'var(--olive-dark)', padding: '40px' }}>
         <div className="stats-bar-grid" style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 40, textAlign: 'center' }}>
-          {[['150+', 'Homes sold'], ['$42M', 'Total volume'], ['12', 'Years in SW Virginia'], ['4.9', 'Average rating']].map(([num, label]) => (
+          {[['25', 'Years in SW Virginia'], ['5', 'Areas served'], ['5.0', 'Google rating'], ['< 1 hr', 'Avg response time']].map(([num, label]) => (
             <div key={label}>
               <div style={{ fontFamily: 'var(--font-numbers)', fontSize: 36, color: 'var(--warm-cream)', marginBottom: 4, fontWeight: 500 }}>{num}</div>
               <div style={{ fontSize: 14, color: 'rgba(250, 246, 240, 0.6)' }}>{label}</div>
