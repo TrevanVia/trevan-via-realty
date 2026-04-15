@@ -22,8 +22,8 @@ export default function Home() {
       <section className="section-pad" style={{ padding: '120px 40px 80px', background: 'var(--warm-cream-dark)' }} id="about">
         <div className="about-grid" style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '0.8fr 1.2fr', gap: 80, alignItems: 'center' }}>
           <div style={{ position: 'relative', minHeight: 420 }}>
-            <div onClick={() => setLightbox('/trevan-ransom.webp')} style={{ position: 'absolute', top: 0, left: 0, width: '65%', aspectRatio: '4/5', backgroundImage: 'url(/trevan-ransom.webp)', backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: 16, cursor: 'pointer', zIndex: 2, boxShadow: '0 8px 30px rgba(0,0,0,0.12)' }} />
-            <div onClick={() => setLightbox('/family.jpg')} style={{ position: 'absolute', bottom: 0, right: 0, width: '60%', aspectRatio: '3/4', backgroundImage: 'url(/family.jpg)', backgroundSize: 'cover', backgroundPosition: 'center top', borderRadius: 16, cursor: 'pointer', zIndex: 1, boxShadow: '0 8px 30px rgba(0,0,0,0.12)' }} />
+            <div onClick={() => setLightbox('/trevan-ransom.webp')} style={{ position: 'absolute', top: 0, left: 0, width: '58%', aspectRatio: '4/5', backgroundImage: 'url(/trevan-ransom.webp)', backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: 16, cursor: 'pointer', zIndex: 2, boxShadow: '0 8px 30px rgba(0,0,0,0.12)' }} />
+            <div onClick={() => setLightbox('/family.jpg')} style={{ position: 'absolute', bottom: -10, right: -10, width: '52%', aspectRatio: '3/4', backgroundImage: 'url(/family.jpg)', backgroundSize: 'cover', backgroundPosition: 'center top', borderRadius: 16, cursor: 'pointer', zIndex: 1, boxShadow: '0 8px 30px rgba(0,0,0,0.12)' }} />
           </div>
           <div>
             <div className="section-tag">About</div>
