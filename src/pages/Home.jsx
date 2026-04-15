@@ -4,6 +4,7 @@ import SEO from '../components/SEO'
 
 export default function Home() {
   const [formData, setFormData] = useState({ address: '', beds: '3', baths: '2', email: '' })
+  const [lightbox, setLightbox] = useState(null)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -21,8 +22,8 @@ export default function Home() {
       <section className="section-pad" style={{ padding: '120px 40px 80px', background: 'var(--warm-cream-dark)' }} id="about">
         <div className="about-grid" style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '0.8fr 1.2fr', gap: 80, alignItems: 'center' }}>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
-            <div style={{ aspectRatio: '3/4', backgroundImage: 'url(/trevan-ransom.webp)', backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: 16 }} />
-            <div style={{ aspectRatio: '3/4', backgroundImage: 'url(/family.jpg)', backgroundSize: 'cover', backgroundPosition: 'center top', borderRadius: 16 }} />
+            <div onClick={() => setLightbox('/trevan-ransom.webp')} style={{ aspectRatio: '3/4', backgroundImage: 'url(/trevan-ransom.webp)', backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: 16, cursor: 'pointer' }} />
+            <div onClick={() => setLightbox('/family.jpg')} style={{ aspectRatio: '3/4', backgroundImage: 'url(/family.jpg)', backgroundSize: 'cover', backgroundPosition: 'center top', borderRadius: 16, cursor: 'pointer' }} />
           </div>
           <div>
             <div className="section-tag">About</div>
@@ -141,6 +142,12 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {lightbox && (
+        <div onClick={() => setLightbox(null)} style={{ position: 'fixed', inset: 0, zIndex: 1000, background: 'rgba(0,0,0,0.85)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'zoom-out', padding: 40 }}>
+          <img src={lightbox} alt="" style={{ maxWidth: '90%', maxHeight: '90vh', borderRadius: 12, objectFit: 'contain' }} />
+        </div>
+      )}
     </>
   )
 }
