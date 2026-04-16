@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './pages/Home'
+import HomeValue from './pages/HomeValue'
 import Properties from './pages/Properties'
 import AreaGuide from './pages/AreaGuide'
 import AreasIndex from './pages/AreasIndex'
@@ -13,7 +14,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="home-value" element={<Home />} />
+          <Route path="home-value" element={<HomeValue />} />
           <Route path="properties" element={<Properties />} />
           <Route path="areas" element={<AreasIndex />} />
           <Route path="areas/:slug" element={<AreaGuide />} />
