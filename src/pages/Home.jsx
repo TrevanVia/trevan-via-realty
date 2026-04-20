@@ -15,7 +15,7 @@ export default function Home() {
 
       {/* HERO */}
       <section style={{ padding: '140px 40px 90px', background: 'var(--warm-cream)', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+        <div className="mobile-center" style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div className="section-tag">New River Valley · Floyd County Native</div>
           <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(44px, 6vw, 76px)', lineHeight: 1.05, letterSpacing: '-0.025em', color: 'var(--charcoal)', marginBottom: 28, maxWidth: 960 }}>
             Let's make your move in the New River Valley.
@@ -23,7 +23,7 @@ export default function Home() {
           <p style={{ fontSize: 'clamp(17px, 1.5vw, 20px)', color: 'var(--warm-gray)', lineHeight: 1.6, fontWeight: 300, maxWidth: 680, marginBottom: 40 }}>
             Floyd County native working Blacksburg, Christiansburg, Floyd, Radford, and Pulaski County. No pressure, no BS, straight answers.
           </p>
-          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 28 }}>
+          <div className="mobile-center-buttons" style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 28 }}>
             <Link to="/properties" className="btn-primary">See properties</Link>
             <Link to="/home-value" className="btn-secondary">What's my home worth?</Link>
             <a href="sms:15402394636" className="btn-secondary">Text me</a>
@@ -36,7 +36,7 @@ export default function Home() {
 
       {/* FEATURED LISTING */}
       <section style={{ padding: '80px 40px', background: 'var(--warm-cream-dark)' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+        <div className="mobile-center" style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div className="section-tag">Now listed</div>
           <h2 className="section-title">7423 Floyd Hwy N · Copper Hill</h2>
           <p className="section-sub">4 bed · 4 bath · 3,352 sqft on 6.04 acres. 30 minutes from Roanoke, 20 from Floyd.</p>
@@ -57,7 +57,7 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+              <div className="mobile-center-buttons" style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                 <a href="https://www.zillow.com/homedetails/7423-Floyd-Hwy-N-Copper-Hill-VA-24079/107869052_zpid/" target="_blank" rel="noreferrer" className="btn-primary">View on Zillow</a>
                 <a href="sms:15402394636?body=Interested%20in%207423%20Floyd%20Hwy%20N" className="btn-secondary">Text about this home</a>
               </div>
@@ -77,13 +77,13 @@ export default function Home() {
             <div className="section-tag">About</div>
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(36px, 4vw, 52px)', color: 'var(--charcoal)', marginBottom: 20, letterSpacing: '-0.02em' }}>Grew up here. Work here.</h2>
             <p style={{ fontSize: 17, color: 'var(--warm-gray)', lineHeight: 1.8, fontWeight: 300, marginBottom: 16 }}>
-              I'm Trevan Via. Grew up in Floyd County, graduated in 2019, never left. <strong style={{ color: 'var(--charcoal)', fontWeight: 500 }}>I know the New River Valley because I've lived it, not because I studied a market report.</strong>
+              I'm Trevan Via, born and raised in Floyd County. Graduated in 2019 and never left, which means <strong style={{ color: 'var(--charcoal)', fontWeight: 500 }}>I know the New River Valley because I've lived it, not because I studied a market report.</strong>
             </p>
             <p style={{ fontSize: 17, color: 'var(--warm-gray)', lineHeight: 1.8, fontWeight: 300, marginBottom: 16 }}>
-              I'm not going to overcomplicate this for you. You tell me what you're looking for, I'll tell you what I think, and we'll go from there. If it's not the right fit I'll say so.
+              The way I work is simple: you tell me what you're looking for, I'll give you my honest take, and we go from there. No pressure, no overcomplicating. If it's not the right fit, I'll tell you.
             </p>
             <p style={{ fontSize: 17, color: 'var(--warm-gray)', lineHeight: 1.8, fontWeight: 300, marginBottom: 16 }}>
-              My wife and I just had our first daughter, Gemma. We've got a dog named Ransom. We're not going anywhere.
+              My wife and I just had our first daughter, Gemma, and she joined a house that already had four dogs and a cat running around. Ransom and Whiskey are my boys, and we're not going anywhere.
             </p>
             <div className="qualities-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginTop: 32 }}>
               {['Floyd County native', 'NRV specialist', 'No pressure, no BS', 'Available nights & weekends'].map(q => (
@@ -125,7 +125,7 @@ export default function Home() {
       </div>
 
       {/* AREAS */}
-      <section className="section-pad" style={{ padding: '80px 40px', maxWidth: 1200, margin: '0 auto' }} id="areas">
+      <section className="section-pad mobile-center" style={{ padding: '80px 40px', maxWidth: 1200, margin: '0 auto' }} id="areas">
         <div className="section-tag">Explore the region</div>
         <h2 className="section-title">Know your neighborhood</h2>
         <p className="section-sub">I cover five areas across the NRV. Here's a look at each one.</p>

@@ -23,7 +23,7 @@ export default function Properties() {
       />
 
       {/* PAGE HEADER */}
-      <section style={{ padding: '130px 40px 40px', maxWidth: 1200, margin: '0 auto' }}>
+      <section className="mobile-center" style={{ padding: '130px 40px 40px', maxWidth: 1200, margin: '0 auto' }}>
         <div className="section-tag">Properties</div>
         <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(40px, 5vw, 60px)', lineHeight: 1.05, letterSpacing: '-0.025em', color: 'var(--charcoal)', marginBottom: 20 }}>
           Homes, land, and everything in between.
@@ -75,7 +75,7 @@ export default function Properties() {
                 Custom solid wood cabinets, hardwood floors, and updated mechanicals (oil furnace 2012, heat pump 2016). New well. There's also a 1,526 sqft two-level wood shop on the property. Flat, spacious backyard. No HOA.
               </p>
 
-              <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+              <div className="mobile-center-buttons" style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                 <a href="https://www.zillow.com/homedetails/7423-Floyd-Hwy-N-Copper-Hill-VA-24079/107869052_zpid/" target="_blank" rel="noreferrer" className="btn-primary">View full listing</a>
                 <a href="sms:15402394636?body=Interested%20in%207423%20Floyd%20Hwy%20N" className="btn-secondary">Text about this home</a>
                 <a href="tel:5402394636" className="btn-secondary">Call (540) 239-4636</a>
@@ -87,7 +87,7 @@ export default function Properties() {
 
       {/* SEARCH BY AREA */}
       <section style={{ padding: '80px 40px', background: 'var(--warm-cream-dark)' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+        <div className="mobile-center" style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div className="section-tag">Browse by area</div>
           <h2 className="section-title">Search every listing across the NRV.</h2>
           <p className="section-sub">Jump straight into current listings for each market I cover.</p>

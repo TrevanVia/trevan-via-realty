@@ -22,4 +22,21 @@
   .hero-section { padding: 100px 20px 60px !important; min-height: auto !important; }
   .other-areas-grid { grid-template-columns: 1fr !important; }
   .stats-grid-4col { grid-template-columns: 1fr 1fr !important; }
+
+  /* Mobile centering for short content blocks */
+  .mobile-center { text-align: center !important; }
+  .mobile-center .section-tag,
+  .mobile-center .section-title,
+  .mobile-center .section-sub,
+  .mobile-center h1,
+  .mobile-center h2,
+  .mobile-center p { margin-left: auto !important; margin-right: auto !important; }
+  .mobile-center-buttons { justify-content: center !important; }
+  .mobile-center-flex { justify-content: center !important; align-items: center !important; text-align: center !important; }
+
+  /* Keep reading paragraphs left-aligned even inside mobile-center wrappers */
+  .mobile-center .keep-left { text-align: left !important; }
+
+  /* Global: tighten section-tag on mobile so it doesn't feel orphaned */
+  .section-tag { font-size: 12px !important; }
 }
