@@ -15,13 +15,13 @@ export default function About() {
             <div className="section-tag">About</div>
             <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(36px, 4vw, 48px)', color: 'var(--charcoal)', marginBottom: 20, letterSpacing: '-0.02em' }}>Grew up here. Work here.</h1>
             <p style={{ fontSize: 17, color: 'var(--warm-gray)', lineHeight: 1.8, fontWeight: 300, marginBottom: 16 }}>
-              I'm Trevan Via. Grew up in Floyd County, graduated in 2019, never left. <strong style={{ color: 'var(--charcoal)', fontWeight: 500 }}>I know the New River Valley because I've lived it, not because I studied a market report.</strong>
+              I'm Trevan Via, born and raised in Floyd County. Graduated in 2019 and never left, which means <strong style={{ color: 'var(--charcoal)', fontWeight: 500 }}>I know the New River Valley because I've lived it, not because I studied a market report.</strong>
             </p>
             <p style={{ fontSize: 17, color: 'var(--warm-gray)', lineHeight: 1.8, fontWeight: 300, marginBottom: 16 }}>
-              I'm not going to overcomplicate this for you. You tell me what you're looking for, I'll tell you what I think, and we'll go from there. If it's not the right fit I'll say so.
+              The way I work is simple: you tell me what you're looking for, I'll give you my honest take, and we go from there. No pressure, no overcomplicating. If it's not the right fit, I'll tell you.
             </p>
             <p style={{ fontSize: 17, color: 'var(--warm-gray)', lineHeight: 1.8, fontWeight: 300, marginBottom: 16 }}>
-              My wife and I just had our first daughter, Gemma. We've got a dog named Ransom. We're not going anywhere.
+              My wife and I just had our first daughter, Gemma, and she joined a house that already had four dogs and a cat running around. Ransom and Whiskey are my boys, and we're not going anywhere.
             </p>
             <div className="qualities-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginTop: 32 }}>
               {['Floyd County native', 'NRV specialist', 'No pressure, no BS', 'Available nights & weekends'].map(q => (
