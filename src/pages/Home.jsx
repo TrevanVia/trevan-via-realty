@@ -43,11 +43,7 @@ export default function Home() {
           <div className="mobile-center-buttons" style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 28 }}>
             <Link to="/properties" className="btn-primary">See properties</Link>
             <Link to="/home-value" className="btn-secondary">What's my home worth?</Link>
-            <a href="sms:15402394636" className="btn-secondary">Text me</a>
           </div>
-          <p style={{ fontSize: 14, color: 'var(--warm-gray)', fontWeight: 300 }}>
-            Licensed Realtor at <strong style={{ color: 'var(--charcoal)', fontWeight: 500 }}>Gravity Real Estate Group</strong> · (540) 239-4636
-          </p>
         </div>
       </section>
 
