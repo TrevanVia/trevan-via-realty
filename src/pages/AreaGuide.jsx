@@ -20,8 +20,15 @@ export default function AreaGuide() {
   return (
     <>
       <SEO title={seo.title} description={seo.desc} path={`/areas/${slug}`} />
-      <section className="section-pad" style={{ padding: '130px 40px 60px', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, var(--olive-dark), var(--olive), var(--olive-light))', opacity: 0.95 }} />
+      <section className="section-pad" style={{ padding: '130px 40px 60px', position: 'relative', overflow: 'hidden', minHeight: 460 }}>
+        {area.heroImage ? (
+          <>
+            <div style={{ position: 'absolute', inset: 0, backgroundImage: `url(${area.heroImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }} />
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(44,44,42,0.35) 0%, rgba(44,44,42,0.55) 60%, rgba(44,44,42,0.78) 100%)' }} />
+          </>
+        ) : (
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, var(--olive-dark), var(--olive), var(--olive-light))', opacity: 0.95 }} />
+        )}
         <div style={{ position: 'relative', zIndex: 2, maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ fontSize: 13, color: 'rgba(250,246,240,0.5)', marginBottom: 16 }}>
             <Link to="/" style={{ color: 'rgba(250,246,240,0.5)' }}>Home</Link> &nbsp;/&nbsp; <Link to="/areas" style={{ color: 'rgba(250,246,240,0.5)' }}>Areas</Link> &nbsp;/&nbsp; {area.name}
@@ -53,6 +60,16 @@ export default function AreaGuide() {
           ))}
         </div>
       </div>
+
+      {area.gallery && area.gallery.length > 0 && (
+        <div style={{ padding: '0 40px', maxWidth: 1200, margin: '-40px auto 0', position: 'relative', zIndex: 3 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: `repeat(${area.gallery.length}, 1fr)`, gap: 16 }}>
+            {area.gallery.map((src, i) => (
+              <div key={i} style={{ aspectRatio: '4/3', backgroundImage: `url(${src})`, backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: 12, boxShadow: '0 8px 30px rgba(0,0,0,0.12)' }} />
+            ))}
+          </div>
+        </div>
+      )}
 
       <div style={{ background: 'var(--warm-cream-dark)' }}>
         <div className="section-pad" style={{ padding: '80px 40px', maxWidth: 1200, margin: '0 auto' }}>

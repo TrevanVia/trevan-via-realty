@@ -99,6 +99,8 @@ export const areas = {
     slug: 'floyd-county',
     heroSub: 'Rolling farmland, artist communities, the famous Friday Night Jamboree, and Blue Ridge mountain views from every direction. One stoplight, zero pretension.',
     pop: '~15,600', median: '$216K', schoolRating: 'B', badge: '84% homeownership',
+    heroImage: '/floyd-parkway.jpg',
+    gallery: ['/floyd-downtown.jpg'],
     whyTitle: 'A different kind of living',
     whySub: "Floyd isn't for everyone and that's exactly the point. If you want space, quiet, community, and mountains, there's nowhere better in Virginia.",
     whyCards: [
