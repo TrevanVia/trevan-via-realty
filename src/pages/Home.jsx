@@ -51,6 +51,17 @@ export default function Home() {
         </div>
       </section>
 
+      {/* CREDENTIALS STRIP */}
+      <div style={{ borderTop: '1px solid var(--light-border)', borderBottom: '1px solid var(--light-border)', background: 'var(--warm-cream-dark)', padding: '24px 40px' }}>
+        <div className="creds-strip-inner" style={{ maxWidth: 1200, margin: '0 auto', display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', gap: 24, fontFamily: 'var(--font-body)', fontSize: 13, fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--warm-gray)' }}>
+          <span>Floyd County native</span>
+          <span style={{ color: 'var(--olive-light)', fontSize: 11 }}>◆</span>
+          <span>Available nights &amp; weekends</span>
+          <span style={{ color: 'var(--olive-light)', fontSize: 11 }}>◆</span>
+          <span>Licensed Realtor at Gravity Real Estate Group</span>
+        </div>
+      </div>
+
       {/* ABOUT */}
       <section className="section-pad" style={{ padding: '100px 40px', background: 'var(--warm-cream)' }} id="about">
         <div className="about-grid" style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '0.8fr 1.2fr', gap: 80, alignItems: 'center' }}>
@@ -70,15 +81,7 @@ export default function Home() {
             <p style={{ fontSize: 17, color: 'var(--warm-gray)', lineHeight: 1.8, fontWeight: 300, marginBottom: 16 }}>
               My wife and I just had our first daughter, Gemma, and she joined a house that already had four dogs and a cat running around. Ransom and Whiskey are my boys, and we're not going anywhere.
             </p>
-            <div className="qualities-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginTop: 32 }}>
-              {['Floyd County native', 'NRV specialist', 'No pressure, no BS', 'Available nights & weekends'].map(q => (
-                <div key={q} style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 15, fontWeight: 500 }}>
-                  <span style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--terracotta)', flexShrink: 0 }} />
-                  {q}
-                </div>
-              ))}
-            </div>
-            <p style={{ fontSize: 14, color: 'var(--warm-gray)', marginTop: 24, fontWeight: 300 }}>Licensed Realtor at <strong style={{ color: 'var(--charcoal)' }}>Gravity Real Estate Group</strong></p>
+            <p style={{ fontSize: 14, color: 'var(--warm-gray)', marginTop: 32, fontWeight: 300 }}>Licensed Realtor at <strong style={{ color: 'var(--charcoal)' }}>Gravity Real Estate Group</strong></p>
           </div>
         </div>
       </section>
@@ -144,56 +147,6 @@ export default function Home() {
               Read all reviews on Google →
             </a>
           </div>
-        </div>
-      </section>
-
-      {/* CTA STRIP */}
-      <div style={{ background: 'var(--olive-dark)', padding: '24px 40px' }}>
-        <div style={{ maxWidth: 800, margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 32, flexWrap: 'wrap' }}>
-          <p style={{ fontSize: 17, color: 'var(--warm-cream)', fontFamily: 'var(--font-display)', margin: 0 }}>Ready to make a move?</p>
-          <a href="tel:5402394636" style={{ color: 'var(--warm-cream)', fontSize: 15, fontWeight: 500, padding: '10px 24px', border: '1.5px solid rgba(250,246,240,0.3)', borderRadius: 8 }}>Call (540) 239-4636</a>
-          <a href="mailto:trevan@gravitygroup.us" style={{ color: 'rgba(250,246,240,0.6)', fontSize: 15, fontWeight: 400 }}>trevan@gravitygroup.us</a>
-        </div>
-      </div>
-
-      {/* STATS BAR */}
-      <div style={{ background: 'var(--olive-dark)', padding: '0 40px 40px' }}>
-        <div className="stats-bar-grid" style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 40, textAlign: 'center', paddingTop: 24, borderTop: '1px solid rgba(250,246,240,0.1)' }}>
-          {[
-            ['Day 1', 'Floyd native'],
-            ['5', 'NRV markets'],
-            ['7 days', 'Availability'],
-            ['< 1 hr', 'Response time'],
-          ].map(([num, label]) => (
-            <div key={label}>
-              <div style={{ fontFamily: 'var(--font-numbers)', fontSize: 32, color: 'var(--warm-cream)', marginBottom: 4, fontWeight: 500 }}>{num}</div>
-              <div style={{ fontSize: 13, color: 'rgba(250, 246, 240, 0.5)' }}>{label}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* AREAS */}
-      <section className="section-pad mobile-center" style={{ padding: '80px 40px', maxWidth: 1200, margin: '0 auto' }} id="areas">
-        <div className="section-tag">Explore the region</div>
-        <h2 className="section-title">Know your neighborhood</h2>
-        <p className="section-sub">I cover five areas across the NRV. Here's a look at each one.</p>
-        <div className="area-preview-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 16 }}>
-          {[
-            { name: 'Blacksburg', slug: 'blacksburg', stat: 'Median: $366K' },
-            { name: 'Christiansburg', slug: 'christiansburg', stat: 'Median: $271K' },
-            { name: 'Floyd County', slug: 'floyd-county', stat: 'Acreage available' },
-            { name: 'Radford', slug: 'radford', stat: 'Median: $221K' },
-            { name: 'Pulaski County', slug: 'pulaski-county', stat: 'Median: $192K' },
-          ].map(area => (
-            <Link to={`/areas/${area.slug}`} key={area.slug} style={{ borderRadius: 14, overflow: 'hidden', background: 'white', boxShadow: '0 2px 16px rgba(0,0,0,0.04)', transition: 'all 0.3s', textDecoration: 'none', color: 'inherit' }}>
-              <div style={{ height: 120, background: 'linear-gradient(135deg, var(--olive-light) 0%, var(--olive-dark) 100%)' }} />
-              <div style={{ padding: 16 }}>
-                <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 18, marginBottom: 6 }}>{area.name}</h3>
-                <div style={{ fontSize: 12, color: 'var(--olive)', fontWeight: 500 }}>{area.stat}</div>
-              </div>
-            </Link>
-          ))}
         </div>
       </section>
 

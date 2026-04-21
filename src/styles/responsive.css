@@ -17,7 +17,20 @@
 
 @media (max-width: 700px) {
   .nav-links { display: none !important; }
-  .mobile-cta { display: flex !important; }
+  .mobile-toggle { display: flex !important; }
+  .mobile-menu { display: block !important; }
+
+  /* Testimonials: single column, centered, capped width on mobile */
+  .testimonials-grid { grid-template-columns: 1fr !important; gap: 16px !important; max-width: 440px !important; margin-left: auto !important; margin-right: auto !important; }
+
+  /* Credentials strip: stack vertically, hide diamond separators */
+  .creds-strip-inner { flex-direction: column !important; font-size: 11px !important; gap: 10px !important; text-align: center !important; }
+  .creds-strip-inner > span[style*="olive-light"] { display: none !important; }
+
+  /* Credentials strip: stack vertically on mobile, hide diamond separators */
+  .creds-strip-inner { flex-direction: column !important; font-size: 11px !important; gap: 10px !important; text-align: center !important; }
+  .creds-strip-inner > span[style*="olive-light"] { display: none !important; }
+
   .section-pad { padding-left: 20px !important; padding-right: 20px !important; }
   .hero-section { padding: 100px 20px 60px !important; min-height: auto !important; }
   .other-areas-grid { grid-template-columns: 1fr !important; }
