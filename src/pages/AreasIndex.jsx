@@ -17,7 +17,7 @@ export default function AreasIndex() {
       <div className="area-preview-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
         {Object.values(areas).map(area => (
           <Link to={`/areas/${area.slug}`} key={area.slug} style={{ borderRadius: 16, overflow: 'hidden', background: 'white', boxShadow: '0 2px 20px rgba(0,0,0,0.04)', transition: 'all 0.3s' }}>
-            <div style={{ height: 180, background: 'linear-gradient(135deg, var(--olive-light), var(--olive-dark))' }} />
+            <div style={{ height: 180, background: area.heroImage ? `url(${area.heroImage}) center/cover` : 'linear-gradient(135deg, var(--olive-light), var(--olive-dark))' }} />
             <div style={{ padding: 24 }}>
               <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 22, marginBottom: 6 }}>{area.name}</h3>
               <p style={{ fontSize: 14, color: 'var(--warm-gray)', lineHeight: 1.6, fontWeight: 300, marginBottom: 12 }}>{area.heroSub.slice(0, 120)}...</p>

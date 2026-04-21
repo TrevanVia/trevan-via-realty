@@ -30,16 +30,16 @@ export default function AreaGuide() {
           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, var(--olive-dark), var(--olive), var(--olive-light))', opacity: 0.95 }} />
         )}
         <div style={{ position: 'relative', zIndex: 2, maxWidth: 1200, margin: '0 auto' }}>
-          <div style={{ fontSize: 13, color: 'rgba(250,246,240,0.5)', marginBottom: 16 }}>
+          <div style={{ fontSize: 13, color: 'rgba(250,246,240,0.85)', marginBottom: 16, textShadow: '0 1px 3px rgba(0,0,0,0.3)' }}>
             <Link to="/" style={{ color: 'rgba(250,246,240,0.5)' }}>Home</Link> &nbsp;/&nbsp; <Link to="/areas" style={{ color: 'rgba(250,246,240,0.5)' }}>Areas</Link> &nbsp;/&nbsp; {area.name}
           </div>
-          <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(40px, 5vw, 60px)', color: 'var(--warm-cream)', marginBottom: 12 }}>{area.name}</h1>
-          <p style={{ fontSize: 18, color: 'rgba(250,246,240,0.7)', fontWeight: 300, maxWidth: 600, lineHeight: 1.6, marginBottom: 32 }}>{area.heroSub}</p>
+          <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(40px, 5vw, 60px)', color: 'var(--warm-cream)', marginBottom: 12, textShadow: '0 2px 12px rgba(0,0,0,0.35)' }}>{area.name}</h1>
+          <p style={{ fontSize: 18, color: 'rgba(250,246,240,0.92)', fontWeight: 300, maxWidth: 600, lineHeight: 1.6, marginBottom: 32, textShadow: '0 1px 6px rgba(0,0,0,0.3)' }}>{area.heroSub}</p>
           <div className="hero-stats-row" style={{ display: 'flex', gap: 40 }}>
             {[[area.pop, 'Population'], [area.median, 'Median home value'], [area.schoolRating, 'School rating'], [area.badge.split(' ')[0], area.badge.split(' ').slice(1).join(' ')]].map(([num, label]) => (
               <div key={label}>
-                <div style={{ fontFamily: 'var(--font-numbers)', fontSize: 28, fontWeight: 500, color: 'var(--warm-cream)' }}>{num}</div>
-                <div style={{ fontSize: 13, color: 'rgba(250,246,240,0.5)' }}>{label}</div>
+                <div style={{ fontFamily: 'var(--font-numbers)', fontSize: 28, fontWeight: 500, color: 'var(--warm-cream)', textShadow: '0 2px 8px rgba(0,0,0,0.35)' }}>{num}</div>
+                <div style={{ fontSize: 13, color: 'rgba(250,246,240,0.85)', textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}>{label}</div>
               </div>
             ))}
           </div>
