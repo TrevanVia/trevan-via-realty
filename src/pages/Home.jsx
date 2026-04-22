@@ -33,7 +33,6 @@ export default function Home() {
       {/* HERO */}
       <section style={{ padding: '140px 40px 90px', background: 'var(--warm-cream)', position: 'relative', overflow: 'hidden' }}>
         <div className="mobile-center" style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <div className="section-tag">New River Valley · Floyd County Native</div>
           <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(44px, 6vw, 76px)', lineHeight: 1.05, letterSpacing: '-0.025em', color: 'var(--charcoal)', marginBottom: 28, maxWidth: 960 }}>
             Let's make your move in the New River Valley.
           </h1>
