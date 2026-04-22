@@ -37,7 +37,7 @@ export default function Home() {
             Let's make your move in the New River Valley.
           </h1>
           <p style={{ fontSize: 'clamp(17px, 1.5vw, 20px)', color: 'var(--warm-gray)', lineHeight: 1.6, fontWeight: 300, maxWidth: 680, marginBottom: 40 }}>
-            Homes, land, farms. Across the NRV. Straight answers, always.
+            Homes, land, and everything in between. Across the NRV. Straight answers, always.
           </p>
           <div className="mobile-center-buttons" style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 28 }}>
             <Link to="/properties" className="btn-primary">See properties</Link>
